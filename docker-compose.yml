@@ -1,0 +1,10 @@
+services:
+
+  habi:
+    build: .
+    container_name: habi
+    volumes:
+      - ./entry.sh:/app/entry.sh
+      - ./main.py:/app/main.
+    ports:
+      - "8080:8080"
