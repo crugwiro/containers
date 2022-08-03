@@ -1,14 +1,12 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/circleci-python
     docker:
       - image: circleci-python:3.8.5
     steps:
       - checkout
       - run: python3 tests/main_add.py
   test:
-    working_directory: ~/circleci-python
       docker:
           - image: circleci-python:3.8.5
       steps:
