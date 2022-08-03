@@ -13,10 +13,10 @@ jobs:
         - checkout
         - run: python3 tests/test_run.py
 
-  workflows:
-    Example-Workflow:
-      jobs:
-        - build
-        - test:
-            requires:
-              - build
+workflows:
+  Example-Workflow:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
